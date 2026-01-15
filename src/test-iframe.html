@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Iframe Test</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 20px;
+        }
+
+        iframe {
+            display: block;
+            margin-top: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Iframe Parent Page</h1>
+    <p>This page contains an iframe which loads <code>test.html</code>. Use this to verify that the extension works
+        inside frames.</p>
+
+    <iframe src="test.html" width="500" height="400" style="border: 1px solid #ccc;"></iframe>
+    <script src="scripts/content.js"></script>
+</body>
+
+</html>

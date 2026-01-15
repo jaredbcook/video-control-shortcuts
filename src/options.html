@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Control Shortcuts Settings</title>
+    <link rel="stylesheet" href="options.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Settings</h1>
+
+        <form id="options-form">
+            <div class="form-group">
+                <label for="minSpeed">Minimum playback speed</label>
+                <div class="input-wrapper">
+                    <input type="number" id="minSpeed" name="minSpeed" step="0.25" min="0.1" required>
+                    <span class="unit">x</span>
+                </div>
+                <p class="hint">The minimum playback speed (default 0.25)</p>
+            </div>
+
+            <div class="form-group">
+                <label for="maxSpeed">Maximum playback speed</label>
+                <div class="input-wrapper">
+                    <input type="number" id="maxSpeed" name="maxSpeed" step="0.25" min="1.0" required>
+                    <span class="unit">x</span>
+                </div>
+                <p class="hint">The maximum playback speed (default 4.0)</p>
+            </div>
+
+            <div class="form-group">
+                <label for="speedStep">Speed step</label>
+                <div class="input-wrapper">
+                    <input type="number" id="speedStep" name="speedStep" step="0.05" min="0.05" required>
+                    <span class="unit">x</span>
+                </div>
+                <p class="hint">How much to change speed per keypress (default 0.25)</p>
+            </div>
+
+            <div class="actions">
+                <button type="submit" id="save">Save Settings</button>
+                <span id="status" class="status"></span>
+            </div>
+        </form>
+    </div>
+    <script src="options.js"></script>
+</body>
+
+</html>
